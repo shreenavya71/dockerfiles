@@ -1,8 +1,8 @@
 ARG version
 FROM almalinux:${version:-8}
 #RUN cat /etc/*release
-
 ARG course=Docker
 ARG trainer=sivakumar
-RUN echo "course is : ${course}, trainer is : ${trainer}"
+ENV Duration=120hrs
+RUN echo "course is : ${course}, trainer is : ${trainer}, duration is : ${duration}"
 CMD [ "cat /etc/*release" ]
